@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MustHaveAccessories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(rgb(250, 225, 236), rgb(137, 24, 62), rgb(96, 30, 134), rgb(221, 194, 252));
+            font-family: Arial, sans-serif;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 70px; /* More spacing */
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            position: relative;
+            flex-wrap: nowrap; /* Ensures it stays in one row */
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .nav div, .nav button {
+            font-family: "Bad Script", cursive;
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
+        }
+
+        .nav button {
+            background: none;
+            border: none;
+        }
+
+        .lio {
+            font-size: 50px;
+            font-weight: bold;
+            position: relative;
+            margin-right: auto;
+            padding-left: 20px;
+        }
+
+        .hero img {
+            width: 80%; /* Smaller but responsive */
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 60px;
+            font-family: "Dancing Script", cursive;
+            color: white;
+            margin: 20px 0;
+        }
+
+        .text-center {
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            margin: 10px auto;
+            max-width: 80%;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 40px;
+            }
+
+            .text-center {
+                font-size: 16px;
+            }
+
+            .hero img {
+                width: 100%;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="lio">Persona</div>
+        <div>Home</div>
+        <div>General</div>
+        <div>Premium</div>
+        <button onclick="search()">Search 🔍</button>
+    </div>
+
+    <div class="hero">
+        <img src="https://images.unsplash.com/photo-1607326516496-3e33e048ac05?q=80&w=1974&auto=format&fit=crop" alt="Hero Image">
+    </div>
+
+    <p class="title">Summer 23/24</p>
+    <p class="text-center">Perfume is the luxury a person can carry. Be your own kind.</p>
+    <p class="text-center">Persona perfume is an Italian luxury perfume house founded in 1910 in Milan.</p>
+
+    <div class="gallery">
+        <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1694093217-chanel-chance-eau-fraiche-parfum-64f9cf7140eff.png" alt="Perfume 1">
+        <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?q=80&w=1936&auto=format&fit=crop" alt="Perfume 2">
+        <img src="https://images.unsplash.com/photo-1628001242958-957834454d40?q=80&w=1935&auto=format&fit=crop" alt="Perfume 3">
+        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1904&auto=format&fit=crop" alt="Perfume 4">
+        <img src="https://images.unsplash.com/photo-1610113233329-1c73b6f7fe98?q=80&w=1887&auto=format&fit=crop" alt="Perfume 5">
+        <img src="https://images.unsplash.com/photo-1588177925144-2fd3e4e7ce57?q=80&w=1911&auto=format&fit=crop" alt="Perfume 6">
+    </div>
+
+    <p class="text-center">Collection of fine fragrances is equally as beloved as its luxury handbags and couture goods.</p>
+    <div class="footer">Coded by Ananya Saikia</div>
+
+    <script>
+        function search() {
+            let name = prompt("What is your full name?");
+            alert("Hi " + name + " !! Welcome to the Home Page.");
+        }
+    </script>
+</body>
+</html>
+
